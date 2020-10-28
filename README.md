@@ -9,9 +9,9 @@ Target users are researchers in the field of nanophotonics. In particular, recen
 This package is basically designed for the use with Lumerical FDTD solutions, but any software can be used by exporting four-dimensional (x,y,z,f) electric field and refractive index data as a MATLAB .mat file.
 
 ## References
-[1] Alaee, R.; Rockstuhl, C.; Fernandez-Corbaton, I. An Electromagnetic Multipole Expansion beyond the Long-Wavelength Approximation. Opt. Commun. 2018, 407, 17–21.  
-[2] Baryshnikova, K. V.; Smirnova, D. A.; Luk’yanchuk, B. S.; Kivshar, Y. S. Optical Anapoles: Concepts and Applications. Adv. Opt. Mater. 2019, 7, 1801350.  
-[3] Hasebe, H.; Sugimoto, H.; Hinamoto, T.; Fujii, M. Coupled Toroidal Dipole Modes in Silicon Nanodisk Metasurface: Polarization Independent Narrow Band Absorption and Directional Emission. Adv. Opt. Mater. 2020, 2001148.
+[1] Alaee, R.; Rockstuhl, C.; Fernandez-Corbaton, I. An Electromagnetic Multipole Expansion beyond the Long-Wavelength Approximation. [Opt. Commun. 2018, 407, 17–21.](https://www.sciencedirect.com/science/article/pii/S003040181730754X)  
+[2] Baryshnikova, K. V.; Smirnova, D. A.; Luk’yanchuk, B. S.; Kivshar, Y. S. Optical Anapoles: Concepts and Applications. [Adv. Opt. Mater. 2019, 7, 1801350.](https://onlinelibrary.wiley.com/doi/full/10.1002/adom.201801350)  
+[3] Hasebe, H.; Sugimoto, H.; Hinamoto, T.; Fujii, M. Coupled Toroidal Dipole Modes in Silicon Nanodisk Metasurface: Polarization Independent Narrow Band Absorption and Directional Emission. [Adv. Opt. Mater. 2020, 2001148.](https://onlinelibrary.wiley.com/doi/full/10.1002/adom.202001148)
 
 ## License
 MIT
