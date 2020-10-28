@@ -7,6 +7,10 @@
 # Kobe University, Japan
 #
 ###############################################################
+status = layoutmode;
+if (status == 1) {
+    run;
+}
 
 name_group = "multipole";
 name_field = "field";

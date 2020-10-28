@@ -6,6 +6,7 @@ clear all;
 close all;
 
 %% loading
+addpath('../MENP');
 PhysConst;
 load('ENxyzf.mat');
 [Cp,CT,Cm,CQe,CQm,Csum] = toroidME(x,y,z,f,Ex,Ey,Ez,n_x,n_y,n_z);
