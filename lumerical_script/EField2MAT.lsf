@@ -1,0 +1,33 @@
+###############################################################
+#
+# Efield2MAT exports electric fields and refractive indices as
+# a MATLAB .mat data file for multipole expansion using MENP.
+#
+# Developed by Dr. Tatsuki Hinamoto
+# Kobe University, Japan
+#
+###############################################################
+
+name_group = "multipole";
+name_field = "field";
+name_index = "index";
+
+name_field = name_group+"::"+name_field;
+name_index = name_group+"::"+name_index;
+
+# get index data from index monitor
+if (havedata(name_index,"index_x")) { n_x = getdata(name_index,"index_x"); } else { n_x = 0;  }
+if (havedata(name_index,"index_y")) { n_y = getdata(name_index,"index_y"); } else { n_y = 0;  }
+if (havedata(name_index,"index_z")) { n_z = getdata(name_index,"index_z"); } else { n_z = 0;  }
+
+# get electric fields from field monitor
+Ex = getdata(name_field,"Ex");
+Ey = getdata(name_field,"Ey");
+Ez = getdata(name_field,"Ez");
+
+x = getdata(name_field,"x");
+y = getdata(name_field,"y");
+z = getdata(name_field,"z");
+f = getdata(name_field,"f");
+
+matlabsave("ENxyzf.mat",Ex,Ey,Ez,n_x,n_y,n_z,x,y,z,f);
