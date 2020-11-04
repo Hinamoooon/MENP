@@ -24,4 +24,4 @@ See ./demo_sphere (for exact multipole expansion) and ./demo_disk (for approxima
 
 For the computation, electric field and refractive index data computed around a target nanostructure is required. On Lumerical FDTD Solutions, this export process can be done by running "./lumerical_script/EField2MAT.lsf". As an example, Lumerical project files (.fsp) are also included in the demo directories.
 
-![Scattering spectra of a silicon nanosphere (R = 100 nm)](https://github.com/Hinamoooon/MENP/blob/main/demo_sphere/menp_exact.png?raw=true)
+![Scattering spectra of a silicon nanosphere (R = 100 nm)](https://github.com/Hinamoooon/MENP/blob/main/SiNP_r100.png?raw=true)
