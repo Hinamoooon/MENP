@@ -16,22 +16,28 @@ load('ENxyzf.mat');
 
 %% plot
 lbdp = c./f*1e9;
-result = [Cp,CT,Cm,CQe,CQm,Csum,arg_px,arg_ikTx];
+result = [Cp,CT,Cm,CQe,CQm,Csum];
+result_phase = [arg_px,arg_ikTx];
 
 fig1 = figure();
-plot(lbdp,result(:,6)*1e18,'k--'); hold on; % Csum
-plot(lbdp,result(:,1:5)*1e18,'o-');
-legend('Total','ED','TD','MD','QE','QM');
-xlabel('Wavelength (nm)');
-ylabel('Scattering cross section (nm^2)');
-xlim([550,800]);
+plot(lbdp,result(:,1:5)*1e18,'o-'); hold on;
+plot(lbdp,result(:,6)*1e18,'k--');  % Csum
+% legend('ED','TD','MD','QE','QM','Total');
+legend('C^{p}_{\rm sca}', 'C^{T}_{\rm sca}', 'C^{m}_{\rm sca}', ...
+       'C^{Q^e}_{\rm sca}','C^{Q^m}_{\rm sca}', ...
+       'C^{Total}_{\rm sca}','FontSize', 12);
+title('Scattering spectra of a silicon nanodisk', 'FontSize',12);
+xlabel('Wavelength (nm)', 'FontSize',12);
+ylabel('Scattering cross section (nm^2)', 'FontSize',12);
+xlim([min(lbdp),max(lbdp)]);
 
 fig2 = figure();
-plot(lbdp,result_phase(:,7:8)); hold on;
-legend('p_x','-ikT_x');
-xlabel('Wavelength (nm)');
-ylabel('Phase (rad)');
-xlim([550,800]);
+plot(lbdp,result_phase(:,1:2)); hold on;
+legend('p_x','-ikT_x', 'FontSize',12);
+title('Phase of electric and toroidal dipole moments, a silicon nanodisk', 'FontSize',12);
+xlabel('Wavelength (nm)', 'FontSize',12);
+ylabel('Phase (rad)', 'FontSize',12);
+xlim([min(lbdp),max(lbdp)]);
 
 %% save
 out1 = [lbdp,result];

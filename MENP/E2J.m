@@ -2,8 +2,8 @@ function [Jx,Jy,Jz] = E2J(Ex,Ey,Ez,n_x,n_y,n_z,f4d)
 %E2J calculates current density J=(Jx,Jy,Jz) from electric fields
 %   Input
 %   f: 4D meshgrid of frequency in [Hz].
-%   Ex,Ey,Ez: Complex electric fields at the each grid points (4D array).
-%   n_x,n_y,n_z: Refractive indices at the grid points (4D array).
+%   Ex,Ey,Ez: Complex electric fields at the each grid points (4D matrix).
+%   n_x,n_y,n_z: Refractive indices at the grid points (4D matrix).
 %
 % MENP (Multipole Expansion for NanoPhotonics)
 % T. Hinamoto (Kobe University, Japan)

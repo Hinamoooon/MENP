@@ -2,8 +2,6 @@ function [arg_px,arg_py,arg_pz,arg_ikTx,arg_ikTy,arg_ikTz] = toroidalME_phase(x,
 %toroidalME_phase Phase of electric and toroidal dipole moments
 % Multipole expansion is calculated from current density distribution in
 % Cartesian coordinates. Toroidal dipole is introduced.
-% Note that higher order terms, including mean-square radii multipoles
-% (m(1),T(1),...), are neglected in scattering cross sections.
 % [ref.1,Table1]
 %
 % Input properties
