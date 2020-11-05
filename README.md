@@ -24,7 +24,9 @@ MIT
 Tatsuki Hinamoto@Kobe University, Japan
 
 ## How to use
-See ./demo_sphere (exact and approximated multipole expansion for a silicon nanosphere) and ./demo_disk (approximated multipole expansion including toroidal dipole moment fro a silicon nanodisk).  
+Run following demo  
+./demo_sphere (exact and approximated multipole expansion for a silicon nanosphere)  
+./demo_disk (approximated multipole expansion including toroidal dipole moment fro a silicon nanodisk).  
 
 For the computation, electric field and refractive index data computed around a target nanostructure is required. On Lumerical FDTD Solutions, this exporting process can be done by running "./lumerical_script/EField2MAT.lsf". As an example, Lumerical project files (.fsp) are also included in the demo directories.
 
