@@ -51,7 +51,8 @@ MENP requires electric field (E) and refractive index (n) distributions and thei
 ### ./lumerical_script
 - `EField2MAT.lsf`: Lumerical script file that exports required data (i.e., electric field and refractive index distribution and x,y,z,f coordinates) from a Lumerical FDTD simulation project file (.fsp) as a MATLAB file (.mat) named `ENxyzf.mat`. As can be seen in the script, by default, it reads the results of 3D monitors named "field" and "index" integrated into an analysis group "multipole".
 
-### ./demo_sphere: demo for a silicon nanosphere with a radius of 100 nm for computation of exact and approximated multipole expansion.
+### ./demo_sphere
+Demo for a silicon nanosphere with a radius of 100 nm for computation of exact and approximated multipole expansion.
 - `demo_exact.m`: This script shows how to import the MATLAB file which contains required data (`ENxyzf.m`) and compuate the multipole expansion with `exact.m`. By running it, total and partial scattering spectra are shown, and a csv file (`demo_exact.csv`) is exported.
 - `demo_approx.m`: Sample code which shows how to use `approx.m`
 - `demo_exact.csv`: Sample output data from `demo_exact.m`
@@ -59,7 +60,8 @@ MENP requires electric field (E) and refractive index (n) distributions and thei
 - `MENP_SiNP_r100.fsp`: Sample Lumerical Project for comutation of multipole expansion for a silicon nanophere with 100 nm in radius.
 - `ENxyzf.mat`: Sample input data exproted from `MENP_SiNP_r100.fsp` with `EField2MAT.lsf`.
 
-### ./demo_disk: demo for a silicon nanodisk for computation of multipole expansion (under long-wavelength approx.) into multipoles including a toroidal dipole moment.
+### ./demo_disk
+Demo for a silicon nanodisk for computation of multipole expansion (under long-wavelength approx.) into multipoles including a toroidal dipole moment.
 - `demo_toroidal.m`: This script shows how to compuate the multipole expansion with `toroidalME.m`. In addition to scattering cross sections, it calculates phases of electric and toroidal dipole moments for applications in anapole states.
 - `demo_toroidal.csv`: Sample output data of scattering cross sections from `demo_toroidal.m`
 - `demo_toroidal_phase.csv`: Sample output data of phases from `demo_toroidal.m`
