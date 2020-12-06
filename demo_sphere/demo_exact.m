@@ -9,7 +9,7 @@
 %             Lumerical (FDTD), Comsol (FEM), etc.
 %
 % Output properties
-% Cp,Cm,CQe,CQm: Partial and total scattering cross section
+% Cp,Cm,CQe,CQm,Csum: Partial and total scattering cross section
 % Cp: electric dipole
 % Cm: magnetic dipole
 % CQe: electric quadrupole
@@ -20,7 +20,7 @@
 % 1. "An electromagnetic multipole expansion beyond the long-wavelength approximation"
 %    (http://dx.doi.org/10.1016/j.optcom.2017.08.064)
 %
-% MENP (Multipolar Expansion for NanoPhotonics)
+% MENP (Multipole Expansion for NanoPhotonics)
 % T. Hinamoto (Kobe University, Japan)
 
 clear all;
