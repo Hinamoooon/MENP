@@ -33,7 +33,9 @@ Run following demo to understand the usage.
 For the computation, three dimensional electric field distribution and refractive index data computed around a target nanostructure are required. On Lumerical FDTD Solutions, this exporting process can be done by running a lumerical script "./lumerical_script/EField2MAT.lsf". As an example, Lumerical project files (.fsp) are also included in the demo directories.
 
 ## Input file format
-MENP requires electric field (E) and refractive index (n) distributions and their coordinates (x,y,z,f) saved as an all-in-one MATLAB file (.mat) To see the spectral dependence of decomposed scattering cross sections, it should have four dimensional data of E(x,y,z,f) and n(x,y,z,f) as vectors (i.e., Ex, Ey, Ez, n_x, n_y, n_z). Each array of coordinate x,y,z,f should be an array that have a size of *len* x 1, where *len* indicates the length of each array.
+MENP requires electric field (E) and refractive index (n) distributions and their coordinates (x,y,z,f). To see the spectral dependence of decomposed scattering cross sections, it should have frequency axis (f) in addition to position vector (x,y,z), that is, four dimensional data of E(x,y,z,f) and n(x,y,z,f) as vectors (i.e., Ex, Ey, Ez, n_x, n_y, n_z). Each array of coordinate x,y,z,f should be an array that have a size of *len* x 1, where *len* indicates the length of each array.
+
+The attributes are passed to MENP's main functions (e.g., `exactME.m`) by `exactME(x,y,z,f,Ex,Ey,Ez,n_x,n_y,n_z)`.
 
 ## Directory structure
 ### ./MENP
@@ -49,7 +51,7 @@ MENP requires electric field (E) and refractive index (n) distributions and thei
 - `toroidalME_phase.m`: Supplementary function of `toroidalME.m`. This function provides relative phases of electric and toroidal dipole moments to look into the anapole condition.
 
 ### ./lumerical_script
-- `EField2MAT.lsf`: Lumerical script file that exports required data (i.e., electric field and refractive index distribution and x,y,z,f coordinates) from a Lumerical FDTD simulation project file (.fsp) as a MATLAB file (.mat) named `ENxyzf.mat`. As can be seen in the script, by default, it reads the results of 3D monitors named "field" and "index" integrated into an analysis group "multipole".
+- `EField2MAT.lsf`: Lumerical script file that exports required data (i.e., electric field and refractive index distribution and x,y,z,f coordinates) from a Lumerical FDTD simulation project file (.fsp) as an all-in-one MATLAB file named `ENxyzf.mat`. As can be seen in the script, by default, it reads the results of 3D monitors named "field" and "index" integrated into an analysis group "multipole".
 
 ### ./demo_sphere
 Demo for a silicon nanosphere with a radius of 100 nm for computation of exact and approximated multipole expansion.
