@@ -26,11 +26,11 @@ MIT
 Tatsuki Hinamoto@Kobe University, Japan
 
 ## How to use
-Run following demo to understand the usage.  
-./demo_sphere (exact and approximated multipole expansion for a silicon nanosphere)  
-./demo_disk (approximated multipole expansion including toroidal dipole moment fro a silicon nanodisk).  
+See following demo to understand the usage.  
+`./demo_sphere` (exact and approximated multipole expansion for a silicon nanosphere)  
+`./demo_disk` (approximated multipole expansion including toroidal dipole moment fro a silicon nanodisk).  
 
-For the computation, three dimensional electric field distribution and refractive index data computed around a target nanostructure are required. On Lumerical FDTD Solutions, this exporting process can be done by running a lumerical script "./lumerical_script/EField2MAT.lsf". As an example, Lumerical project files (.fsp) are also included in the demo directories.
+For the computation, three dimensional electric field distribution and refractive index data computed around a target nanostructure are required. On Lumerical FDTD Solutions, this exporting process can be done by running a lumerical script `./lumerical_script/EField2MAT.lsf`. As an example, Lumerical project files (.fsp) are also included in the demo directories.
 
 ## Input file format
 MENP requires electric field (E) and refractive index (n) distributions and their coordinates (x,y,z,f). To see the spectral dependence of decomposed scattering cross sections, it should have frequency axis (f) in addition to position vector (x,y,z), that is, four dimensional data of E(x,y,z,f) and n(x,y,z,f) as vectors (i.e., Ex, Ey, Ez, n_x, n_y, n_z). Each array of coordinate x,y,z,f should be an array that have a size of *len* x 1, where *len* indicates the length of each array.
