@@ -34,12 +34,15 @@ xlim([min(lbdp),max(lbdp)]);
 fig2 = figure();
 plot(lbdp,result_phase(:,1:2)); hold on;
 legend('p_x','-ikT_x', 'FontSize',12);
-title('Phase of electric and toroidal dipole moments, a silicon nanodisk', 'FontSize',12);
+title('Phase of electric and toroidal dipole moments of a silicon nanodisk', 'FontSize',12);
 xlabel('Wavelength (nm)', 'FontSize',12);
 ylabel('Phase (rad)', 'FontSize',12);
 xlim([min(lbdp),max(lbdp)]);
 
 %% save
+print(fig1, mfilename, '-dpng');
+print(fig2, [mfilename,'_phase'], '-dpng');
+
 out1 = [lbdp,result];
 outfilename = [mfilename,'.csv'];
 csvwrite(outfilename,out1);

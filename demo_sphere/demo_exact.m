@@ -47,6 +47,8 @@ legend('C^{p}_{\rm sca}','C^{m}_{\rm sca}', ...
 xlim([min(lbdp),max(lbdp)]);
 
 %% save
+print(fig, mfilename, '-dpng');
+
 out = [lbdp,result];
 outfilename = [mfilename,'.csv'];
 csvwrite(outfilename,out);
