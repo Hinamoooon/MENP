@@ -54,22 +54,28 @@ The attributes are passed to MENP's main functions (e.g., `exactME.m`) by `exact
 - `EField2MAT.lsf`: Lumerical script file that exports required data (i.e., electric field and refractive index distribution and x,y,z,f coordinates) from a Lumerical FDTD simulation project file (.fsp) as an all-in-one MATLAB file named `ENxyzf.mat`. As can be seen in the script, by default, it reads the results of 3D monitors named "field" and "index" integrated into an analysis group "multipole".
 
 ### ./demo_sphere
-Demo for a silicon nanosphere with a radius of 100 nm for computation of exact and approximated multipole expansion.
-- `demo_exact.m`: This script shows how to import the MATLAB file which contains required data (`ENxyzf.m`) and compuate the multipole expansion with `exact.m`. By running it, total and partial scattering spectra are shown, and a csv file (`demo_exact.csv`) is exported.
+Demo for a silicon nanosphere with a radius of 100 nm for computation of exact and approximated multipole expansion.  
+#### Demo scripts
+- `demo_exact.m`: This script shows how to import the MATLAB file which contains required data (`ENxyzf.m`) and compuate the multipole expansion with `exact.m`. By running it, total and partial scattering spectra are shown, and a image of the spectra (`demo_exact.png`) and a csv file (`demo_exact.csv`) are exported.
 - `demo_approx.m`: Sample code which shows how to use `approx.m`
+
+#### Sample input and output data
+- `MENP_SiNP_r100.fsp`: Sample Lumerical Project for comutation of multipole expansion for a silicon nanophere with 100 nm in radius.
+- `ENxyzf.mat`: Sample input data exproted from `MENP_SiNP_r100.fsp` with `EField2MAT.lsf`.
 - `demo_exact.csv`: Sample output data from `demo_exact.m`
 - `demo_exact.png`: Sample output figure from `demo_exact.m`
 - `demo_approx.csv`: Sample output data from `demo_approx.m`
 - `demo_approx.png`: Sample output figure from `demo_approx.m`
-- `MENP_SiNP_r100.fsp`: Sample Lumerical Project for comutation of multipole expansion for a silicon nanophere with 100 nm in radius.
-- `ENxyzf.mat`: Sample input data exproted from `MENP_SiNP_r100.fsp` with `EField2MAT.lsf`.
 
 ### ./demo_disk
 Demo for a silicon nanodisk for computation of multipole expansion (under long-wavelength approx.) into multipoles including a toroidal dipole moment.
+#### Demo scripts
 - `demo_toroidal.m`: This script shows how to compuate the multipole expansion with `toroidalME.m`. In addition to scattering cross sections, it calculates phases of electric and toroidal dipole moments for applications in anapole states.
+
+#### Sample input and output data
+- `MENP_SiND_D310H50.fsp`: Sample Lumerical Project for comutation of multipole expansion for a silicon nanodisk with diameter of 310 nm and height of 50 nm.
+- `ENxyzf.mat`: Sample input data exproted from `MENP_SiND_D310H50.fsp` with `EField2MAT.lsf`.
 - `demo_toroidal.csv`: Sample output data of scattering cross sections from `demo_toroidal.m`
 - `demo_toroidal.png`: Sample output figure from `demo_toroidal.m`
 - `demo_toroidal_phase.csv`: Sample output data of phases from `demo_toroidal.m`
 - `demo_toroidal_phase.png`: Sample output figure of phases from `demo_toroidal.m`
-- `MENP_SiND_D310H50.fsp`: Sample Lumerical Project for comutation of multipole expansion for a silicon nanodisk with diameter of 310 nm and height of 50 nm.
-- `ENxyzf.mat`: Sample input data exproted from `MENP_SiND_D310H50.fsp` with `EField2MAT.lsf`.
