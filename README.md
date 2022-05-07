@@ -1,5 +1,5 @@
 # MENP
-[![Open in Code Ocean](https://codeocean.com/codeocean-assets/badge/open-in-code-ocean.svg)](https://codeocean.com/capsule/30a8126e-fe5a-45fb-b8c0-c05f9cc289d8/)  
+[Open in Code Ocean](https://codeocean.com/capsule/30a8126e-fe5a-45fb-b8c0-c05f9cc289d8/)  
 Multipole Expansion for NanoPhotonics (MENP)  
 
 ## General
@@ -13,7 +13,7 @@ This package is basically designed for the use with Lumerical FDTD solutions, bu
 
 ## Reference
 We ask you to cite the following paper when you publish results obtained with MENP.  
-**Tatsuki Hinamto and Minoru Fujii "MENP: An Open-Source MATLAB Implementation of Multipole Expansion for Applications in Nanophotonics", [arXiv:2011.03661](https://arxiv.org/abs/2011.03661)**
+**Tatsuki Hinamto and Minoru Fujii "MENP: An Open-Source MATLAB Implementation of Multipole Expansion for Applications in Nanophotonics", [OSA Continuum Vol. 4, Issue 5, pp. 1640-1648 (2021)](https://opg.optica.org/osac/fulltext.cfm?uri=osac-4-5-1640&id=450943)**
 
 ## Supplementary references to implemented formulation
 1. Alaee, R.; Rockstuhl, C.; Fernandez-Corbaton, I. An Electromagnetic Multipole Expansion beyond the Long-Wavelength Approximation. [Opt. Commun. 2018, 407, 17–21.](https://www.sciencedirect.com/science/article/pii/S003040181730754X)  
